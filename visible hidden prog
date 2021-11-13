@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            #name{
+                background-color:orange;
+                margin:20px;
+            }
+        </style>
+        <script>
+            function fun(obj){
+                document.getElementById("name").style.visibility="hidden";
+                document.getElementById("n").style.visibility="hidden";
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="name">
+            <li>rajesh</li>
+            <li>kanna</li>
+            <li>raj</li>
+            <li>rajesh</li>
+        </ul>
+         <ul id="n">
+            <li>rajesh</li>
+            <li>kanna</li>
+            <li></li>
+            <li>rajesh</li>
+        </ul>
+        <button onclick="fun(this)"style.visibility="hidden">kanna</button>
+    </body>
+</html>
