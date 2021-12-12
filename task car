@@ -1,0 +1,1747 @@
+-------------------menu----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="pratice1.jpeg";
+            }
+            else if(start==2){
+                img="pratice2.jpg";
+            }
+           
+            else if(start==3){
+                img="redhonda3.jpg";
+            }
+           else{
+               img="honda5.jpg";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload=set_time()>
+    <div class="menu" >
+        <ul>
+            <li class="a"><a href="#">COMPANY</a>
+            <div class="sub-menu">
+                <ul>
+                    
+                    <li><a href="submenu.html">TATA</a></li>
+                    <li><a href="firsthonda.html">H0NDA</a></li>
+                    <li><a href="bmw.html">BMW</a></li> 
+                </ul>
+            </div>
+            </li>
+            <li class="b"><a href="#">price</a>
+                <div class="p1">
+            <ul>
+                   <li><a href="below5.html">below 5,00,0000</a></li>
+                   <li><a href="below10.html">below 10,00,0000</a></li>
+                   <li><a href="below15.html">below 15,00,0000</a></li>
+            </ul>
+        </div>
+            </li>
+            <li ><a href="#">color</a></li>
+            <li ><a href="#">engine</a></li>
+            <li ><a href="#">model</a></li>
+        </ul>
+    </div>
+    <div class="images">
+        <img src="pratice1.jpeg" height="600" width="1600" id="one">
+    </div>
+</body>
+</html>
+-----------------menu css----------------
+*{
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    box-sizing: border-box;
+}
+.menu{
+    background-color: rgb(58, 114, 146);
+    text-align: center;
+}
+.menu li{
+    display: inline-flex;
+    color:rgb(236, 233, 233);
+}
+.menu ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu ul li a{
+    text-decoration: none;
+    list-style: none;
+    color:#fff;
+    
+    margin: 0;
+   
+}
+.a,.menu ul li:hover{
+    background-color: #2ba;
+    border-radius: 3px;
+    color:crimson;
+    
+}
+.sub-menu{
+    display: none;
+   
+}
+.p1{
+    display: none;
+}
+.menu ul li:hover .sub-menu{
+    display: block;
+    position:absolute;
+    color:black;
+    background-color: rgb(173, 59, 69);
+    margin-top:20px ;
+    margin-left: -10px;
+}
+.menu ul li:hover .p1{
+    display: block;
+    position:absolute;
+    color:black;
+    background-color: rgb(167, 36, 55);
+    margin-top:20px ;
+    margin-left: -10px;
+    
+}
+.menu ul li:hover .p1 li{
+    display: block;
+    margin:5px;
+}
+.menu ul li:hover .sub-menu li{
+    display: block;
+    margin:5px;
+}
+.menu ul li:hover .p1 ul li{
+    width: 120px;
+    padding: 15px;
+    background:transparent;
+    border-bottom: 1px dotted rgb(146, 44, 44);
+    border-radius: 0;
+    text-align: center;
+}
+.menu ul li:hover .sub-menu ul li{
+    width: 80px;
+    padding: 15px;
+    background:transparent;
+    border-bottom: 1px dotted #fff;
+    border-radius: 0;
+    text-align: center;
+}
+\--------------------second html---------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-left: 10px;
+           
+            padding:5px;
+            margin-top: 10px;
+        }
+        h2{
+            align:center;
+        }
+        .a1{
+            float: left;
+            width:30%;
+            border:2px solid rgb(188, 192, 197);
+            
+        }
+        .a2{
+            float: left;
+            width:32%;
+            border:2px solid rgb(208, 211, 214);
+        }
+        .b1{
+            float: left;
+            width:30%;
+            border:2px solid rgb(206, 208, 211);
+        }
+        .b2{
+            float: left;
+            width:32%;
+            border:2px solid rgb(220, 222, 223);
+        }
+    </style>
+</head>
+
+<body >
+    <div class="menu">
+    <div class="a1">
+    <img src="secondimage1.jpg" height="300"width="450" id="one">
+     <h2 alien="center">MRP=10,00000</h2>
+    <h2>Brand:BMW</h2>
+  </div>
+  <div class="a1">
+    <img src="pratice1.jpeg" height="300"width="450" id="one">
+    <h2 alien="center">MRP=10,00000</h2>
+    <h2>Brand:TATA</h2>
+  </div>
+  <div class="a2">
+    <img src="secondimage2.jpg" height="300"width="450" id="one">
+    <h2 alien="center">MRP=10,00000</h2>
+    <h2>Brand:Honda</h2>
+  </div>
+  <div class="b1">
+    <img src="bmw1.jpg" height="300"width="450" id="one">
+   
+
+    <h2 alien="center">MRP=10,00000</h2>
+    <h2>Brand:BMW</h2>
+  </div>
+  <div class="b1">
+    <img src="bmw2.jpg" height="300"width="450" id="one">
+    <h2 alien="center">MRP=10,00000</h2>
+    <h2>Brand:TATA</h2>
+  </div>
+  <div class="b2">
+    <img src="bmw3.jpg" height="300"width="480" id="one">
+    <h2 alien="center">MRP=10,00000</h2>
+    <h2>Brand:Honda</h2>
+  </div>
+  </div>
+</body>
+</html>
+----------------second css------------
+body{background-color: black;}
+        .a1{
+            background-color: black;
+            color: turquoise;
+            margin-left: 30px;
+            margin-right: 30px;
+            height: 40px;
+            border: 2px rgb(192, 146, 60) dotted;
+        }
+        .a1 h3{text-align: center;}
+        .first{
+           background-color: white;
+            float: left;
+            width: 28%;
+            margin-left: 50px;
+            margin-top: 70px;
+            border: 2px rgb(219, 217, 212) solid;
+        }
+        .second{
+           background-color: white;
+            float: left;
+            width: 28%;
+            margin-left: 50px;
+            margin-top: 70px;
+            border: 2px rgb(219, 217, 212) solid;
+        }
+        .third{
+           background-color: white;
+            float: left;
+            width: 30%;
+            margin-left: 50px;
+            margin-top: 70px;
+            border: 2px rgb(219, 217, 212) solid;
+        }
+        .a2{background-color: rgb(246, 246, 12);
+            rotate: kanna;
+         color:black;
+         margin-left: 250px;
+         margin-right: 20px;
+         height: 50px;
+        }
+        .a2 h2{text-align: center;font-size: x-large;margin-top: 20px;}
+        
+        -------------------submenu2 html------------------
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="blue1.webp";
+            }
+            else if(start==2){
+                img="blue4.jpg";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="blue3.webp";
+            }
+           else{
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="blue1.webp"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::14,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+----------------submenu3 html------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="yellow1.jpg";
+            }
+            else if(start==2){
+                img="yellow2.jpg";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="yellow3.jpg";
+            }
+           else{
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="yellow1.jpg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::14,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+-----------------honda html---------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: peachpuff;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>HONDA CARS</h1>
+        <div class="first">
+            <img src="honda5.jpg" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="honda6.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 10,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="honda1.webp" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,200,OOO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="hondapage4.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="honda4.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage5.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage4.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+---------------honda1 html------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="greenhonda1.jpg";
+            }
+            else if(start==2){
+                img="greenhonda2.jpg";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="greenhonda3.jpg";
+            }
+            else if(start==4){
+                img="greenhonda4.jpg";
+            }
+           else{
+            img="greenhonda1.jpg";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="greenhonda1.jpg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::14,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+-----------------honda2 html----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="blackhonda1.jpg";
+            }
+            else if(start==2){
+                img="blackhonda2.webp";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="blackhonda3.jpg";
+            }
+           
+           else{
+            img="blackhonda1.jpg";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="blackhonda1.jpg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::14,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+------------------honda3 html------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="drakblack1.jpg";
+            }
+            else if(start==2){
+                img="darkblack2.jpg";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="arkblack3.png";
+            }
+           
+           else{
+            img="drakblack1.jpg";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="drakblack1.jpg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::14,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+-----------------honda4 html-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="redhonda1.webp";
+            }
+            else if(start==2){
+                img="redhonda2.png";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="redhonda3.jpg";
+            }
+           
+           else{
+            img="redhonda1.webp";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="redhonda1.webp"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::14,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+------------------bmw html-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: rgb(185, 112, 48);
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>BMW CARS</h1>
+        <div class="first">
+            <img src="bmw1.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="bmw2.jpg" height="400"width="400">
+            <h4> BME</h4>
+            <h3>BME PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 64,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="bmw3.jpg" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 70,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="bmw4.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 50,200,OOO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="bmwpage3.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="bmw5.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 55,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage3.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="bmw6.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 60,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+-----------------bmw1 html------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="bmwblack1.jpg";
+            }
+            else if(start==2){
+                img="bmwblack2.jpg";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="bmwblack3.jpg";
+            }
+           
+           else{
+               img="bmwblack1.jpg";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="bmwblack1.jpg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::55,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+----------------bmw2 htl-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="bmwwhite1.jpg";
+            }
+            else if(start==2){
+                img="bmwwhite2.webp";
+            }
+            // else if(start==3){
+            //     img="pratice3.jpg";
+            // }
+            else if(start==3){
+                img="bmwwhite3.jpg";
+            }
+           
+           else{
+            img="bmwwhite2.webp";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="bmwwhite1.jpg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::50,40,000</h3>
+    <h2>Tata best model in india</h2>
+</div>
+</body>
+</html>
+-----------------bmw3 html-----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 300px;
+        }
+        h3{text-align: center;color:rebeccapurple}
+        h2{text-align: center;color:blue}
+    </style>
+    <script>
+        var start=1;
+        
+        function set_time(){
+           setInterval(img_show,3000);
+        }
+        function img_show(){
+            var img;
+            if(start==1){
+                img="bmwblue1.jpeg";
+            }
+            else if(start==2){
+                img="bmwblue2.jpg";
+            }
+            
+            else if(start==3){
+                img="bmwblue3.jpg";
+            }
+           
+           else{
+            img="bmwblue2.jpg";
+               start=1;
+           }
+           document.getElementById("one").src=""+img;
+           start++;
+        }
+    </script>
+</head>
+<body onload="set_time()">
+    <div class="container">
+    <img src="bmwblue1.jpeg"height="500" width="900" id="one">
+</div>
+<div>
+    <h3>Tata model:XX123</h3>
+    <h3>prize::55,40,000</h3>
+    <h2> best model in india</h2>
+</div>
+</body>
+</html>
+------------------price-------------------
+------------------below 5 html---------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{ background-color: cornflowerblue;}
+    img{
+        margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+        float: left;
+        width: 30%;
+    }
+</style>
+<body>
+    <a href="below5tata.html"> <img src="tatalog.jpg" height="300" width="400"></a>
+   <a href="below5honda.html"><img src="hondalogo.jpg" height="300" width="400"></a> 
+   <a href="below5bmw.html"> <img src="suzukilogo.png" height="300" width="400"></a>
+</body>
+</html>
+-----------------------below 5 tata html-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <div class="first">
+            <img src="tata1.jpg" height="400"width="400">
+            <h4>NEW TOYATA</h4>
+            <h3>TOYATA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 5,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="tata2.png" height="400"width="400">
+            <h4> TOYATA</h4>
+            <h3>TOYATA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 4,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="tata3.webp" height="400"width="400">
+            <h4> TOYATA</h4>
+            <h3>TOYATA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 5,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu3.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
+------------------------below5 honda html----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: peachpuff;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>HONDA CARS</h1>
+        <div class="first">
+            <img src="honda5.jpg" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="honda6.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 10,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="honda1.webp" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 4,200,OO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="hondapage4.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="honda4.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 3,200,OO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage5.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 5,000,OO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage4.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+----------------------------below5 bmw---------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: rgb(185, 112, 48);
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>BMW CARS</h1>
+        <div class="first">
+            <img src="bmw1.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 2,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="bmw2.jpg" height="400"width="400">
+            <h4> BME</h4>
+            <h3>BME PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 4,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="bmw3.jpg" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 3,50,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="bmw4.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 5,00,OOO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="bmwpage3.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="bmw5.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 4,00,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage3.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="bmw6.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 60,200,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+------------------below10 html--------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{ background-color: cornflowerblue;}
+    img{
+        margin-top: 100px;
+        margin-left: 50px;
+        float: left;
+        width: 30%;
+    }
+</style>
+<body>
+    <a href="below10tata.html"><img src="tatalog.jpg" height="300" width="400"></a>
+    <a href="below10honda.html"><img src="hondalogo.jpg" height="300" width="400"></a>
+    <a href="below10suzuki.html"><img src="suzukilogo.png" height="300" width="400"></a>
+</body>
+</html>
+--------------------below10 tata html---------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <div class="first">
+            <img src="tata1.jpg" height="400"width="400">
+            <h4>NEW TOYATA</h4>
+            <h3>TOYATA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 8,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="tata2.png" height="400"width="400">
+            <h4> TOYATA</h4>
+            <h3>TOYATA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 9,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="tata3.webp" height="400"width="400">
+            <h4> TOYATA</h4>
+            <h3>TOYATA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 7,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu3.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
+------------------below 10 honda-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: peachpuff;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>HONDA CARS</h1>
+        <div class="first">
+            <img src="honda5.jpg" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 7,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 5,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="honda6.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 10,00,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="honda1.webp" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 6,20,OO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="hondapage4.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="honda4.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 8,20,OO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage5.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 9,00,OO0</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage4.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+-----------------------below 10 suzuki----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: rgb(185, 112, 48);
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>BMW CARS</h1>
+        <div class="first">
+            <img src="bmw1.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 8,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="bmw2.jpg" height="400"width="400">
+            <h4> BME</h4>
+            <h3>BME PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 8,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="bmw3.jpg" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 5,50,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="bmw4.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 9,00,OOO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="bmwpage3.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="bmw5.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 8,00,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage3.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="bmw6.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 6,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+------------------------below 15 html-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{ background-color: cornflowerblue;}
+    img{
+        margin-top: 100px;
+        margin-left: 50px;
+        float: left;
+        width: 30%;
+    }
+</style>
+<body>
+   <a href="below15tata.html"><img src="tatalog.jpg" height="300" width="400"></a> 
+   <a href="below15honda.html"> <img src="hondalogo.jpg" height="300" width="400"></a>
+   <a href="below15suzuki.html"><img src="suzukilogo.png" height="300" width="400"></a> 
+</body>
+</html>
+------------------------below 15 tata html---------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <div class="first">
+            <img src="tata1.jpg" height="400"width="400">
+            <h4>NEW TOYATA</h4>
+            <h3>TOYATA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 13,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="tata2.png" height="400"width="400">
+            <h4> TOYATA</h4>
+            <h3>TOYATA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="tata3.webp" height="400"width="400">
+            <h4> TOYATA</h4>
+            <h3>TOYATA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu3.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
+---------------------------------below 15 honda html----------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: peachpuff;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>HONDA CARS</h1>
+        <div class="first">
+            <img src="honda5.jpg" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="honda6.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 10,00,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="honda1.webp" height="400"width="400">
+            <h4>NEW HONDA</h4>
+            <h3>HONDA PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,20,OO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="hondapage4.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="honda4.jpg" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,20,OO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage5.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="honda2.png" height="400"width="400">
+            <h4> HONDA</h4>
+            <h3>HONDA PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,00,OO0</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="hondapage4.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+------------------------------below 15 suzuki----------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        h1{
+            background-color: rgb(185, 112, 48);
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px rebeccapurple solid;
+        }
+    </style>
+</head>
+<body background="black">
+    <div class="main">
+        <h1>BMW CARS</h1>
+        <div class="first">
+            <img src="bmw1.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 13,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage1.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="second">
+            <img src="bmw2.jpg" height="400"width="400">
+            <h4> BME</h4>
+            <h3>BME PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 12,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+        <div class="third">
+            <img src="bmw3.jpg" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 15,00,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage2.html">show more>>></a></h2>
+          </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="first">
+            <img src="bmw4.jpg" height="400"width="400">
+            <h4>NEW BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 13,00,OOO</h3>
+           </div>
+           <div class="a2">
+            <h2><a href="bmwpage3.html">show more>>></a></h2>
+        
+           </div>
+           </div>
+           <div class="second">
+            <img src="bmw5.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2020</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,00,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="bmwpage3.html">show more>>></a></h2>
+          </div>
+          </div>
+          <div class="third">
+            <img src="bmw6.webp" height="400"width="400">
+            <h4> BMW</h4>
+            <h3>BMW PREMIO 2019</h3>
+            <div class="a1">
+           <h3>BUY   LKR 14,20,OOO</h3>
+           </div>
+          <div class="a2">
+              <h2><a href="submenu1.html">show more>>></a></h2>
+          </div>
+    </div>
+</body>
+</html>
+
+        
