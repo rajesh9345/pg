@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        #b1{margin-left: 1400px;}
+        #a1{margin-left: 50px;}
+        #a2{margin-left: 50px;}
+        #a3{margin-left: 50px;}
+        #a4{margin-left: 200px;}
+        #a5{margin-left: 1200px;}
+        .main{background-color: orange;}
+        .col{float: left;}
+        .sec{margin-left: 80px;padding: 30px;}
+        .back{background-image: url("pushpa4.jpg");height: 500px;width: auto;}
+        .one{padding:40px;color: powderblue;}
+        h4{background-color: rgb(59, 59, 59);margin-right: 400px;}
+        h3{background-color: rgb(70, 68, 69);margin-right: 600px;}
+        img{border-radius: 4%;}
+        .btn{margin-left: 50px;}
+        
+    </style>
+    <script>
+        function bra(aaa){
+            document.getElementById("a1").style.visibility="visible";
+            document.getElementById("a2").style.visibility="visible";
+            document.getElementById("a3").style.visibility="visible";
+            document.getElementById("a4").style.visibility="visible";
+            document.getElementById("a5").style.visibility="visible";
+        }
+        function ba(bb){
+            document.getElementById("a1").style.visibility="hidden";
+            document.getElementById("a2").style.visibility="hidden";
+            document.getElementById("a3").style.visibility="hidden";
+            document.getElementById("a4").style.visibility="hidden";
+            document.getElementById("a5").style.visibility="hidden";
+        }
+      
+    </script>
+</head>
+<body>
+    
+    <button onclick="bra(this)"  id="b1">sign up</button><br>
+    <div class="main"  id="a5" style="visibility: hidden;">
+    <input type="text" id="a1" style="visibility: hidden;" placeholder="Name"><br>
+    <input tyep="text"id="a2" style="visibility: hidden;" placeholder="password"><br>
+    <input type="date" id="a3"style="visibility: hidden;" placeholder="date"><br>
+    <input type="submit" id="a4"style="visibility: hidden;" value="ok" onclick="ba(this)"><br>
+</div>
+<div class="back">
+<div class="sec">
+    <div class="col">
+    <img src="pushpa3.jpg" height="400" width="600">
+</div>
+<div class="col" >
+    <div class="one">
+    <h1>Pushpa:The Rise -Part 01</h1><br>
+    <h2>Morning Time</h2>
+    <h3>2D</h3>
+    <h4>Telugu,Kannada</h4>
+    <h5>2hr:59m..17 Dec</h5><br>
+    <button type="button" class="btn btn-danger">Book the ticket</button>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
