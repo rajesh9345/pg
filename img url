@@ -1,0 +1,215 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<%@include file="adminheader.jsp"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="../style.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Staatliches"
+rel="stylesheet" />
+<script type="text/javascript">
+function validateDate() {
+var givendate = document.getElementById("m_rdate").value;
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+if (givendate >= today) {
+document.getElementById("msg-date").style.display = "none";
+document.getElementById("submit").type = "submit";
+} else {
+document.getElementById("msg-date").style.display = "block";
+document.getElementById("submit").type = "button";
+}
+}
+function validateDuration() {
+var duration = document.getElementById("m_duration").value;
+if (duration > 60) {
+document.getElementById("msg-dur").style.display = "none";
+document.getElementById("submit").type = "submit";
+} else {
+document.getElementById("msg-dur").style.display = "block";
+document.getElementById("submit").type = "button";
+}
+}
+</script>
+</head>
+<body>
+<div class="register" style="padding: 80px 80px;">
+<form action="/admin/addmovies" method="post" class="login-form"
+style="padding: 60px 100px; border-radius: 90px 0px 90px 0px">
+<label>Movie Name</label><input type="text" name="m_name" id="m_name"
+class="form-control"> <label>Description</label>
+<textarea type="text" name="m_desc" id="m_desc" class="form-control"></textarea>
+<label>Release date</label><input type="date" name="m_rdate"
+id="m_rdate" class="form-control" onblur="validateDate()"> <span
+id="msg-date" class="text text-danger"
+style="display: none; font-weight: bold">Enter the valid
+release Date</span> <label>Duration</label><input type="text"
+name="m_duration" id="m_duration" class="form-control"
+onblur="validateDuration()"> <span id="msg-dur"
+class="text text-danger" style="display: none; font-weight: bold">Duration
+must be minimum 60 min</span> <label>Cover photo url</label><input
+type="text" name="m_image" id="m_image" class="form-control">
+<label>Trailer url</label><input type="text" name="m_trailer"
+id="m_trailer" class="form-control"><br> <br>
+<button type="submit" class="btn loginbtn"
+style="margin-left: 45.5%; font-size: 18px; padding-top: 2px;">
+Add <i class="fa fa-plus"></i>
+</button>
+<br> <br>
+<p class="text text-center" style="font-size: 18px;">
+Click here to <a class="signup-p" href="/admin/view"
+style="font-style: italic;">View Movies</a>
+</p>
+</form>
+</div>
+</body>
+</html>
+public List<Movie> getMovies() {
+return movieRepo.findAll();
+}
+🙌
+@RequestMapping(value = "/addmovie", method = RequestMethod.GET)
+public String addMovie() {
+return "addmovie";
+}
+
+@RequestMapping(value = "/addmovies", method = RequestMethod.POST)
+public String addMovie1(@RequestParam("m_name") String m_name, @RequestParam("m_desc") String m_desc,
+@RequestParam("m_rdate") String m_rdate, @RequestParam("m_duration") String m_duration,
+@RequestParam("m_image") String m_image, @RequestParam("m_trailer") String m_trailer, Model model) {
+Movie movie = new Movie();
+movie.setMovieName(m_name);
+movie.setMovieDescription(m_desc);
+movie.setReleaseDate(m_rdate);
+movie.setDuration(m_duration);
+movie.setCoverPhotoUrl(m_image);
+movie.setTrailerUrl(m_trailer);
+
+adminService.addMovies(movie);
+// List<Movie> movies=new ArrayList<Movie>();
+// movies=adminService.getMovies();
+model.addAttribute("msg", "One Movie Data added Successfully");
+return "addmovie";
+
+}
+🥴
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<%@include file="guestheader.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="main-banner">
+<div class="slideshow-container">
+<div class="slides">
+<img src="../images/Spiderman-No-Way-Home.png" class="slide-image">
+</div>
+<div class="slides">
+<img src="../images/weekendoffer.png" class="slide-image">
+</div>
+<div class="slides">
+<img src="../images/rrr.jpg" class="slide-image">
+</div>
+<div class="slides">
+<img src="../images/sbi-offerbanner.jpg" class="slide-image">
+</div>
+<div class="slides">
+<img src="../images/kungfupanda.jpg" class="slide-image">
+</div>
+<div class="slides">
+<img src="../images/film-festival-banner.jpg" class="slide-image">
+</div>
+<div class="slides">
+<img src="../images/insideout.jpg" class="slide-image">
+</div>
+<a class="prev" onclick="plusSlides(-1, 0)"><i
+class="fa fa-chevron-left"></i></a> <a class="next"
+onclick="plusSlides(1, 0)"><i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
+<div class="row" id="movie" style="margin: 1%; margin-top: 60px;">
+</div>
+<%@include file="footer.jsp"%>
+<script>
+var slideIndex = [ 1 ];
+var slideId = [ "slides" ];
+showSlides(1, 0);
+
+function plusSlides(n, no) {
+showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+var i;
+var x = document.getElementsByClassName(slideId[no]);
+if (n > x.length) {
+slideIndex[no] = 1
+}
+if (n < 1) {
+slideIndex[no] = x.length
+}
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+x[slideIndex[no] - 1].style.display = "block";
+}
+<c:forEach items="${movies}" var = "m" varStatus="loop">
+
+var div = document.createElement("div")
+var innerDiv = document.createElement("div");
+
+div.className = "col-lg-3 col-md-4 col-sm-6 card-main";
+innerDiv.className = "card text text-center";
+
+var img = document.createElement("img");
+img.className = "div-image";
+img.src = "../images/" + "${m.coverPhotoUrl}";
+
+var movieTitle = document.createElement("p");
+movieTitle.innerHTML += "${m.movieName}";
+movieTitle.className = "movie-title";
+
+var movieGenre = document.createElement("p");
+movieGenre.className = "movie-genre";
+movieGenre.innerHTML += "genre: ${m.movieDescription}";
+
+document.getElementById("movie").appendChild(div);
+div.appendChild(innerDiv)
+innerDiv.appendChild(img);
+innerDiv.appendChild(movieTitle);
+innerDiv.appendChild(movieGenre);
+</c:forEach>
+</script>
+</body>
+</html>
+
+java.sun.com
+Oracle Java Technologies | Oracle
+Java can help reduce costs, drive innovation, & improve application services; the #1 programming language for IoT, enterprise architecture, and cloud computing.
+public void addMovies(Movie movie) {
+movieRepo.save(movie);
+
+}
